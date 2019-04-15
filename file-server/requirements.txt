@@ -1,0 +1,6 @@
+flask
+uwsgi
+requests
+importlib
+hashlib
+datetime
