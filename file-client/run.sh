@@ -14,10 +14,10 @@ fi
 
 shard_max=100
 
-if [ $shard_value -gt $shard_max ];then
-	echo "shard value too large"
-	exit
-fi
+#if [ $shard_value -gt $shard_max ];then
+#	echo "shard value too large"
+#	exit
+#fi
 
 
 

@@ -92,3 +92,13 @@ class Upload(object):
                   "task_log": task_log}
         os.system("rm -rf ./temp/%s/%s" % (user_id, task_id))
         return output.normal_result(result)
+
+    def delete_temp(self, request):
+        """delete"""
+        user_id = request.form.get("user_id", None)
+        task_id = request.form.get("task_id", None)
+        os.system("rm -rf ./temp/%s/%s" % (user_id, task_id))
+        result = {"user_id": user_id, "task_id": task_id}
+        return output.normal_result(result)
+
+

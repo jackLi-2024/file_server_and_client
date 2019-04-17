@@ -1,5 +1,3 @@
-pip install -r requirement.txt
-
 Modify config.ini 
 
 1. start

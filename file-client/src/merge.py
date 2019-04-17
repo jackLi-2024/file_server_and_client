@@ -17,8 +17,8 @@ def merge(server,filename,task_id,user_id,task_log):
     url = "http://%s/fileupload/upload/merge" % server
     data = {"user_id": user_id, "task_id": task_id, "filename":filename, "task_log": task_log}
     response = requests.post(url=url, data=data)
-    print response.text
-    print "合并完成"
+    print(response.text)
+    print("Done!!!")
     
 
 if __name__ == '__main__':
@@ -32,7 +32,6 @@ if __name__ == '__main__':
         try:
             task_id = json.loads(data).get("data").get("task_id")
             task_log = json.loads(data).get("data").get("task_log")
-            merge(server,filename,task_id,user_id,task_log)
         except Exception as e:
-            print str(e)
-            pass
+            continue
+        merge(server,filename,task_id,user_id,task_log)

@@ -17,7 +17,7 @@ def get_task_id(server,task_log,user_id):
     url = "http://%s/fileupload/upload/get_task_id" % server
     data = {"user_id": user_id, "task_log": task_log}
     response = requests.post(url=url, data=data)
-    print response.text
+    print(response.text)
 
 
 
